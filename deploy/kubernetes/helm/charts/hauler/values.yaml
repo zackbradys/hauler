@@ -46,7 +46,7 @@ haulerJobs:
       #   name: additional-manifests.yaml
 
 # Helm Chart Values for the Hauler Fileserver
-# Docs: https://rancherfederal.github.io/hauler-docs/docs/guides-references/command-line/hauler-store#hauler-store-serve-fileserver
+# Docs: https://rancherfederal.github.io/hauler-docs/docs/guides-references/hauler-fileserver
 
 haulerFileserver:
   enabled: true
@@ -55,7 +55,7 @@ haulerFileserver:
 
   ingress:
     enabled: true
-    hostname: fileserver.ranchers.io
+    hostname: fileserver.example.com # update to your hostname
     tls:
       enabled: true
       source: secret # only supported source
@@ -70,7 +70,7 @@ haulerFileserver:
       targetPort: 8080 # default port for the fileserver
 
 # Helm Chart Values for the Hauler Registry
-# Docs: https://rancherfederal.github.io/hauler-docs/docs/guides-references/command-line/hauler-store#hauler-store-serve-registry
+# Docs: https://rancherfederal.github.io/hauler-docs/docs/guides-references/hauler-registry
 
 haulerRegistry:
   enabled: true
@@ -79,7 +79,7 @@ haulerRegistry:
 
   ingress:
     enabled: true
-    hostname: registry.ranchers.io
+    hostname: registry.example.com # update to your hostname
     tls:
       enabled: true
       source: secret # only supported source
